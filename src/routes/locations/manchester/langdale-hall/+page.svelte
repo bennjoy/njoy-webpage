@@ -57,8 +57,6 @@
           </div>
           
           <a href="/about" class="hover:text-njoy-green transition-colors" style="text-decoration: none;">About</a>
-          <a 
-          <a 
       </nav>
       
       <!-- Auth buttons -->
