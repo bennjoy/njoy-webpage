@@ -30,8 +30,8 @@
           </div>
           
           <a href="/about" class="hover:text-njoy-green transition-colors" style="text-decoration: none;">About</a>
-          <a href="/help" class="hover:text-njoy-green transition-colors" style="text-decoration: none;">Help</a>
-          <a href="/contact" class="hover:text-njoy-green transition-colors" style="text-decoration: none;">Contact</a>
+          <a 
+          <a 
       </nav>
       
       <!-- Auth buttons -->
