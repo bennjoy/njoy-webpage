@@ -62,10 +62,14 @@
   <div 
     class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4"
     on:click={handleBackdropClick}
+    on:keydown={handleBackdropClick}
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modal-title"
   >
     <!-- Modal Content -->
     <div class="bg-njoy-dark rounded-lg p-6 w-full max-w-md max-h-[90vh] overflow-y-auto">
-      <h2 class="text-white text-xl font-bold mb-6">Book a Viewing</h2>
+      <h2 id="modal-title" class="text-white text-xl font-bold mb-6">Book a Viewing</h2>
       
       <form on:submit|preventDefault={submitForm} class="space-y-4">
         <!-- Site Selection -->
