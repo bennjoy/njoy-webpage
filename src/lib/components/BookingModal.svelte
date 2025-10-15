@@ -66,6 +66,7 @@
     role="dialog"
     aria-modal="true"
     aria-labelledby="modal-title"
+    tabindex="-1"
   >
     <!-- Modal Content -->
     <div class="bg-njoy-dark rounded-lg p-6 w-full max-w-md max-h-[90vh] overflow-y-auto">
