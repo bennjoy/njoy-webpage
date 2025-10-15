@@ -190,11 +190,9 @@
             </div>
         </div>
         
-        <p class="text-lg md:text-xl text-white/90 mb-12 font-medium">
+        <p class="text-2xl md:text-4xl text-white/90 mb-12 font-medium">
             Unique, all-inclusive <span class="text-njoy-green">student living</span>.
-        </p>
-        
-        <div class="relative inline-block">
+        </p>        <div class="relative inline-block">
             <h1 class="text-3xl md:text-4xl font-bold mb-16">Choose your city.</h1>
             
             <!-- Sketchy Arrow to the left of "Choose your city" (Manchester) -->
