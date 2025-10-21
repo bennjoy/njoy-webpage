@@ -1,8 +1,10 @@
 <script>
   let showManchesterVideo = false;
+  let showLeedsVideo = false;
   let showManchesterSketch = false;
   let showLeedsSketch = false;
   let videoElement;
+  let leedsVideoElement;
   let currentCircle = 1;
   let currentLeedsCircle = 1;
   let circleInterval;
@@ -91,8 +93,12 @@
   }
   
   function handleLeedsHover() {
+    showLeedsVideo = true;
     showLeedsSketch = true;
     isHoveringCity = true;
+    if (leedsVideoElement) {
+      leedsVideoElement.play();
+    }
     
     // Start cycling through Leeds circle variations
     leedsCircleInterval = setInterval(() => {
@@ -108,8 +114,13 @@
   }
   
   function handleLeedsLeave() {
+    showLeedsVideo = false;
     showLeedsSketch = false;
     isHoveringCity = false;
+    if (leedsVideoElement) {
+      leedsVideoElement.pause();
+      leedsVideoElement.currentTime = 0;
+    }
     
     // Stop cycling Leeds circles
     if (leedsCircleInterval) {
@@ -172,12 +183,23 @@
     <!-- Background Video -->
     <video 
       bind:this={videoElement}
-      class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 {showManchesterVideo ? 'opacity-60' : 'opacity-0'}"
+      class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 {showManchesterVideo ? 'opacity-40' : 'opacity-0'}"
       muted
       loop
       preload="metadata"
     >
       <source src="/langdale-drone.mp4" type="video/mp4">
+    </video>
+    
+    <!-- Leeds Background Video -->
+    <video 
+      bind:this={leedsVideoElement}
+      class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 {showLeedsVideo ? 'opacity-40' : 'opacity-0'}"
+      muted
+      loop
+      preload="metadata"
+    >
+      <source src="/carrmills-drone.mp4" type="video/mp4">
     </video>
     
     <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
