@@ -224,7 +224,7 @@
                         class="flex-1 border border-gray-600 text-white py-2 px-3 rounded text-sm font-medium hover:bg-gray-700 transition-colors text-center"
                         style="text-decoration: none;"
                       >
-                        View property
+                        See more
                       </a>
                     </div>
                   </div>

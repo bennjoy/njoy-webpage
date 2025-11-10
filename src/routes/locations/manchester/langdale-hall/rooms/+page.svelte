@@ -3,7 +3,7 @@
   import { page } from '$app/stores';
 
   let selectedRoomTypes = [];
-  let priceRange = 165;
+  let priceRange = 158;
   let contractLength = '51wks';
   let showBookingModal = false;
   let selectedRoom = '';
@@ -11,14 +11,17 @@
 
   // All rooms data for Langdale Hall
   const allRooms = [
-    { type: 'Single Room', price51: 122, price45: 132, description: 'Single bedroom with shared bathroom and communal kitchen' },
-    { type: 'Double Room', price51: 136, price45: 148, description: 'Spacious double bedroom with shared facilities' },
-    { type: 'Large Double', price51: 143, price45: 155, description: 'Extra spacious double room with premium furnishings' },
-    { type: 'Single Ensuite', price51: 145, price45: 158, description: 'Single room with private en-suite bathroom' },
-    { type: 'Studio', price51: 165, price45: 179, description: 'Complete studio apartment for ultimate privacy' }
+    { id: 'MB1', type: 'Standard Ensuite', price51: 122, price45: 132, description: 'Comfortable standard ensuite with modern amenities' },
+    { id: 'MB2', type: 'Large Ensuite', price51: 136, price45: 148, description: 'Spacious ensuite bedroom with enhanced comfort' },
+    { id: 'MB3', type: 'Compact Studio', price51: 143, price45: 155, description: 'Cozy studio apartment with independent living space' },
+    { id: 'MB4', type: 'Ensuite with Private Kitchen', price51: 145, price45: 158, description: 'Premium ensuite with private kitchenette' },
+    { id: 'MB21', type: 'Standard Ensuite', price51: 122, price45: 132, description: 'Comfortable standard ensuite with modern amenities' },
+    { id: 'MB22', type: 'Large Ensuite', price51: 136, price45: 148, description: 'Spacious ensuite bedroom with enhanced comfort' },
+    { id: 'MB23', type: 'Compact Studio', price51: 143, price45: 155, description: 'Cozy studio apartment with independent living space' },
+    { id: 'MB24', type: 'Ensuite with Private Kitchen', price51: 145, price45: 158, description: 'Premium ensuite with private kitchenette' }
   ];
 
-  const roomTypes = ['Single Room', 'Double Room', 'Large Double', 'Single Ensuite', 'Studio'];
+  const roomTypes = ['Standard Ensuite', 'Large Ensuite', 'Compact Studio', 'Ensuite with Private Kitchen'];
 
   // Initialize selected room types from query parameter (only once)
   $: if ($page.url.searchParams.has('type') && !initialized) {
@@ -61,11 +64,10 @@
   const subLocations = ['Langdale Hall'];
 
   const roomPricing = {
-    'Single Room': { '51wks': 122, '45wks': 132 },
-    'Double Room': { '51wks': 136, '45wks': 148 },
-    'Large Double': { '51wks': 143, '45wks': 155 },
-    'Single Ensuite': { '51wks': 145, '45wks': 158 },
-    'Studio': { '51wks': 165, '45wks': 179 }
+    'Standard Ensuite': { '51wks': 122, '45wks': 132 },
+    'Large Ensuite': { '51wks': 136, '45wks': 148 },
+    'Compact Studio': { '51wks': 143, '45wks': 155 },
+    'Ensuite with Private Kitchen': { '51wks': 145, '45wks': 158 }
   };
 </script>
 
@@ -186,15 +188,15 @@
               </div>
               <input 
                 type="range"
-                min="120"
-                max="180"
-                step="5"
+                min="122"
+                max="158"
+                step="1"
                 bind:value={priceRange}
                 class="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer accent-njoy-green"
               />
               <div class="flex justify-between text-xs text-gray-400 mt-2">
-                <span>£120</span>
-                <span>£180</span>
+                <span>£122</span>
+                <span>£158</span>
               </div>
             </div>
           </div>
@@ -209,16 +211,17 @@
           {:else}
             <!-- Room Cards Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {#each filteredRooms as room (room.type)}
+              {#each filteredRooms as room (room.id)}
                 <div style="background-color: rgb(43, 43, 43);" class="rounded-lg overflow-hidden">
                   <div class="relative">
-                    <img src="/langdale-hall.jpg" alt={room.type} class="w-full h-48 object-cover">
+                    <img src="/langdale-hall.jpg" alt={room.id} class="w-full h-48 object-cover">
                     <div class="absolute top-3 right-3 bg-njoy-green text-white px-2 py-1 rounded text-sm font-medium">
                       £{getCurrentPrice(room)} per week
                     </div>
                   </div>
                   <div class="p-4">
-                    <h3 class="text-white font-bold text-lg mb-2">{room.type}</h3>
+                    <h3 class="text-white font-bold text-lg mb-2">{room.id}</h3>
+                    <p class="text-gray-400 text-sm mb-2">{room.type}</p>
                     <p class="text-gray-300 text-sm mb-4">{room.description}</p>
                     <div class="flex gap-2">
                       <button 
@@ -228,11 +231,11 @@
                         Book viewing
                       </button>
                       <a 
-                        href="/locations/manchester/langdale-hall"
+                        href="/locations/manchester/langdale-hall/rooms/{room.id}"
                         class="flex-1 border border-gray-600 text-white py-2 px-3 rounded text-sm font-medium hover:bg-gray-700 transition-colors text-center"
                         style="text-decoration: none;"
                       >
-                        View property
+                        See more
                       </a>
                     </div>
                   </div>
