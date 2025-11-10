@@ -134,9 +134,9 @@
               >
                 Book a viewing
               </button>
-              <button class="w-full border border-gray-600 text-white py-3 rounded font-medium hover:bg-gray-700 transition-colors">
+              <a href="/locations/manchester/carfax-court/rooms" class="block w-full border border-gray-600 text-white py-3 rounded font-medium hover:bg-gray-700 transition-colors text-center" style="text-decoration: none;">
                 View all rooms
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -174,9 +174,13 @@
                   >
                     Book viewing
                   </button>
-                  <button class="flex-1 border border-gray-600 text-white py-2 px-3 rounded text-sm font-medium hover:bg-gray-700 transition-colors">
+                  <a 
+                    href="/locations/manchester/carfax-court/rooms?type=Double Ensuite"
+                    class="flex-1 border border-gray-600 text-white py-2 px-3 rounded text-sm font-medium hover:bg-gray-700 transition-colors text-center"
+                    style="text-decoration: none;"
+                  >
                     View rooms
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -199,9 +203,13 @@
                   >
                     Book viewing
                   </button>
-                  <button class="flex-1 border border-gray-600 text-white py-2 px-3 rounded text-sm font-medium hover:bg-gray-700 transition-colors">
+                  <a 
+                    href="/locations/manchester/carfax-court/rooms?type=Studio"
+                    class="flex-1 border border-gray-600 text-white py-2 px-3 rounded text-sm font-medium hover:bg-gray-700 transition-colors text-center"
+                    style="text-decoration: none;"
+                  >
                     View rooms
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -224,9 +232,13 @@
                   >
                     Book viewing
                   </button>
-                  <button class="flex-1 border border-gray-600 text-white py-2 px-3 rounded text-sm font-medium hover:bg-gray-700 transition-colors">
+                  <a 
+                    href="/locations/manchester/carfax-court/rooms?type=One Bed Flat"
+                    class="flex-1 border border-gray-600 text-white py-2 px-3 rounded text-sm font-medium hover:bg-gray-700 transition-colors text-center"
+                    style="text-decoration: none;"
+                  >
                     View rooms
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>

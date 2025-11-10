@@ -131,9 +131,9 @@
               <button class="w-full bg-njoy-green text-white py-3 rounded font-medium hover:bg-green-700 transition-colors mb-3" on:click={() => openBookingModal('')}>
                 Book a viewing
               </button>
-              <button class="w-full border border-gray-600 text-white py-3 rounded font-medium hover:bg-gray-700 transition-colors">
+              <a href="/locations/leeds/carr-mills/rooms" class="block w-full border border-gray-600 text-white py-3 rounded font-medium hover:bg-gray-700 transition-colors text-center" style="text-decoration: none;">
                 View all rooms
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -167,9 +167,9 @@
                   <button class="flex-1 bg-njoy-green text-white py-2 px-3 rounded text-sm font-medium hover:bg-green-700 transition-colors" on:click={() => openBookingModal('Shared Bathroom')}>
                     Book viewing
                   </button>
-                  <button class="flex-1 border border-gray-600 text-white py-2 px-3 rounded text-sm font-medium hover:bg-gray-700 transition-colors">
+                  <a href="/locations/leeds/carr-mills/rooms?type=Shared Bathroom" class="flex-1 border border-gray-600 text-white py-2 px-3 rounded text-sm font-medium hover:bg-gray-700 transition-colors text-center" style="text-decoration: none;">
                     View rooms
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -189,9 +189,9 @@
                   <button class="flex-1 bg-njoy-green text-white py-2 px-3 rounded text-sm font-medium hover:bg-green-700 transition-colors" on:click={() => openBookingModal('En-suite Room')}>
                     Book viewing
                   </button>
-                  <button class="flex-1 border border-gray-600 text-white py-2 px-3 rounded text-sm font-medium hover:bg-gray-700 transition-colors">
+                  <a href="/locations/leeds/carr-mills/rooms?type=En-suite Room" class="flex-1 border border-gray-600 text-white py-2 px-3 rounded text-sm font-medium hover:bg-gray-700 transition-colors text-center" style="text-decoration: none;">
                     View rooms
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -211,9 +211,9 @@
                   <button class="flex-1 bg-njoy-green text-white py-2 px-3 rounded text-sm font-medium hover:bg-green-700 transition-colors" on:click={() => openBookingModal('Studio')}>
                     Book viewing
                   </button>
-                  <button class="flex-1 border border-gray-600 text-white py-2 px-3 rounded text-sm font-medium hover:bg-gray-700 transition-colors">
+                  <a href="/locations/leeds/carr-mills/rooms?type=Studio" class="flex-1 border border-gray-600 text-white py-2 px-3 rounded text-sm font-medium hover:bg-gray-700 transition-colors text-center" style="text-decoration: none;">
                     View rooms
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>

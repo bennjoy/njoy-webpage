@@ -126,9 +126,9 @@
               <button class="w-full bg-njoy-green text-white py-3 rounded font-medium hover:bg-green-700 transition-colors mb-3" on:click={() => openBookingModal('')}>
                 Book a viewing
               </button>
-              <button class="w-full border border-gray-600 text-white py-3 rounded font-medium hover:bg-gray-700 transition-colors">
+              <a href="/locations/manchester/q3/rooms" class="block w-full border border-gray-600 text-white py-3 rounded font-medium hover:bg-gray-700 transition-colors text-center" style="text-decoration: none;">
                 View all rooms
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -163,9 +163,9 @@
                   <button class="flex-1 bg-njoy-green text-white py-2 px-3 rounded text-sm font-medium hover:bg-green-700 transition-colors" on:click={() => openBookingModal('Double Ensuite')}>
                     Book viewing
                   </button>
-                  <button class="flex-1 border border-gray-600 text-white py-2 px-3 rounded text-sm font-medium hover:bg-gray-700 transition-colors">
+                  <a href="/locations/manchester/q3/rooms?type=Double Ensuite" class="flex-1 border border-gray-600 text-white py-2 px-3 rounded text-sm font-medium hover:bg-gray-700 transition-colors text-center" style="text-decoration: none;">
                     View rooms
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -185,9 +185,9 @@
                   <button class="flex-1 bg-njoy-green text-white py-2 px-3 rounded text-sm font-medium hover:bg-green-700 transition-colors" on:click={() => openBookingModal('One Bed Flat')}>
                     Book viewing
                   </button>
-                  <button class="flex-1 border border-gray-600 text-white py-2 px-3 rounded text-sm font-medium hover:bg-gray-700 transition-colors">
+                  <a href="/locations/manchester/q3/rooms?type=One Bed Flat" class="flex-1 border border-gray-600 text-white py-2 px-3 rounded text-sm font-medium hover:bg-gray-700 transition-colors text-center" style="text-decoration: none;">
                     View rooms
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>

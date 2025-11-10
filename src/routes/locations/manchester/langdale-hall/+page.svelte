@@ -144,9 +144,9 @@
               >
                 Book a viewing
               </button>
-              <button class="w-full border border-gray-600 text-white py-3 rounded font-medium hover:bg-gray-700 transition-colors">
+              <a href="/locations/manchester/langdale-hall/rooms" class="block w-full border border-gray-600 text-white py-3 rounded font-medium hover:bg-gray-700 transition-colors text-center" style="text-decoration: none;">
                 View all rooms
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -183,9 +183,9 @@
                   >
                     Book viewing
                   </button>
-                  <button class="flex-1 border border-gray-600 text-white py-2 px-3 rounded text-sm font-medium hover:bg-gray-700 transition-colors">
+                  <a href="/locations/manchester/langdale-hall/rooms?type=Single Room" class="flex-1 border border-gray-600 text-white py-2 px-3 rounded text-sm font-medium hover:bg-gray-700 transition-colors text-center" style="text-decoration: none;">
                     View rooms
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -208,9 +208,9 @@
                   >
                     Book viewing
                   </button>
-                  <button class="flex-1 border border-gray-600 text-white py-2 px-3 rounded text-sm font-medium hover:bg-gray-700 transition-colors">
+                  <a href="/locations/manchester/langdale-hall/rooms?type=Double Room" class="flex-1 border border-gray-600 text-white py-2 px-3 rounded text-sm font-medium hover:bg-gray-700 transition-colors text-center" style="text-decoration: none;">
                     View rooms
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -233,9 +233,9 @@
                   >
                     Book viewing
                   </button>
-                  <button class="flex-1 border border-gray-600 text-white py-2 px-3 rounded text-sm font-medium hover:bg-gray-700 transition-colors">
+                  <a href="/locations/manchester/langdale-hall/rooms?type=Large Double" class="flex-1 border border-gray-600 text-white py-2 px-3 rounded text-sm font-medium hover:bg-gray-700 transition-colors text-center" style="text-decoration: none;">
                     View rooms
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -258,9 +258,9 @@
                   >
                     Book viewing
                   </button>
-                  <button class="flex-1 border border-gray-600 text-white py-2 px-3 rounded text-sm font-medium hover:bg-gray-700 transition-colors">
+                  <a href="/locations/manchester/langdale-hall/rooms?type=Single Ensuite" class="flex-1 border border-gray-600 text-white py-2 px-3 rounded text-sm font-medium hover:bg-gray-700 transition-colors text-center" style="text-decoration: none;">
                     View rooms
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -283,9 +283,9 @@
                   >
                     Book viewing
                   </button>
-                  <button class="flex-1 border border-gray-600 text-white py-2 px-3 rounded text-sm font-medium hover:bg-gray-700 transition-colors">
+                  <a href="/locations/manchester/langdale-hall/rooms?type=Studio" class="flex-1 border border-gray-600 text-white py-2 px-3 rounded text-sm font-medium hover:bg-gray-700 transition-colors text-center" style="text-decoration: none;">
                     View rooms
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
