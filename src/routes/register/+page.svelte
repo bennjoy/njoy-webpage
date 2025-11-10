@@ -69,28 +69,36 @@
       Njoy<span class="ml-1 text-njoy-green font-poppins">Student Living</span>
     </a>
 
-    <!-- Navigation -->
-    <nav class="hidden md:flex space-x-6">
-      <a href="/" class="text-gray-300 hover:text-white transition" style="text-decoration: none;">Home</a>
-      
-      <!-- Locations Dropdown -->
-      <div class="relative group">
-        <button class="text-gray-300 hover:text-white transition" style="text-decoration: none; background: none; border: none; padding: 0; cursor: pointer;">
-          Locations
-        </button>
-        <div class="absolute left-0 mt-0 w-32 bg-njoy-dark border border-gray-700 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none group-hover:pointer-events-auto">
-          <a href="/locations/manchester" class="block px-4 py-2 text-gray-300 hover:text-njoy-green transition" style="text-decoration: none;">Manchester</a>
-          <a href="/locations/leeds" class="block px-4 py-2 text-gray-300 hover:text-njoy-green transition" style="text-decoration: none;">Leeds</a>
+    <div class="flex items-center space-x-8">
+      <!-- Navigation -->
+      <nav class="hidden md:flex space-x-6">
+        <a href="/" class="hover:text-njoy-green transition-colors" style="text-decoration: none;">Home</a>
+        
+        <!-- Locations dropdown -->
+        <div class="relative group">
+          <button class="hover:text-njoy-green transition-colors text-white" style="text-decoration: none; background: none; border: none; padding: 0; font-size: inherit; font-family: inherit; cursor: pointer;">
+            Locations
+          </button>
+          
+          <!-- Dropdown menu -->
+          <div class="absolute top-full left-0 mt-2 bg-njoy-dark border border-gray-600 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 min-w-[120px]">
+            <a href="/locations/manchester" class="block px-4 py-3 text-white hover:bg-gray-700 hover:text-njoy-green transition-colors rounded-t-lg no-underline" style="text-decoration: none !important;">Manchester</a>
+            <a href="/locations/leeds" class="block px-4 py-3 text-white hover:bg-gray-700 hover:text-njoy-green transition-colors rounded-b-lg no-underline" style="text-decoration: none !important;">Leeds</a>
+          </div>
         </div>
+        
+        <a href="/about" class="hover:text-njoy-green transition-colors" style="text-decoration: none;">About</a>
+      </nav>
+      
+      <!-- Auth buttons -->
+      <div class="flex space-x-4">
+        <a href="/login" class="px-4 py-2 border border-gray-600 rounded text-white hover:bg-gray-700 transition-colors" style="text-decoration: none; display: flex; align-items: center;">
+          Sign in
+        </a>
+        <a href="/register" class="px-4 py-2 bg-njoy-green text-white rounded hover:bg-green-700 transition-colors" style="text-decoration: none; display: flex; align-items: center;">
+          Register
+        </a>
       </div>
-
-      <a href="/about" class="text-gray-300 hover:text-white transition" style="text-decoration: none;">About</a>
-    </nav>
-
-    <!-- Auth buttons -->
-    <div class="flex space-x-4">
-      <a href="/login" class="text-gray-300 hover:text-white transition" style="text-decoration: none;">Sign in</a>
-      <a href="/register" class="text-njoy-green hover:text-green-400 transition" style="text-decoration: none;">Register</a>
     </div>
   </div>
 </header>
