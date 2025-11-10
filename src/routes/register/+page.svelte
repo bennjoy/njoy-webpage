@@ -1,6 +1,8 @@
 <script>
   import { goto } from '$app/navigation';
   
+  let firstName = '';
+  let lastName = '';
   let email = '';
   let password = '';
   let confirmPassword = '';
@@ -17,7 +19,7 @@
     errorMessage = '';
 
     try {
-      if (!email || !password || !confirmPassword) {
+      if (!firstName || !lastName || !email || !password || !confirmPassword) {
         errorMessage = 'Please fill in all fields';
         isLoading = false;
         return;
@@ -105,6 +107,36 @@
 
       <!-- Registration Form -->
       <form on:submit={handleRegister} class="space-y-6">
+        <!-- First Name Input -->
+        <div>
+          <label for="firstName" class="block text-sm font-medium text-gray-300 mb-2">
+            First Name:
+          </label>
+          <input
+            type="text"
+            id="firstName"
+            bind:value={firstName}
+            placeholder=""
+            class="w-full px-4 py-3 border border-gray-600 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-njoy-green focus:border-transparent transition"
+            required
+          />
+        </div>
+
+        <!-- Last Name Input -->
+        <div>
+          <label for="lastName" class="block text-sm font-medium text-gray-300 mb-2">
+            Last Name:
+          </label>
+          <input
+            type="text"
+            id="lastName"
+            bind:value={lastName}
+            placeholder=""
+            class="w-full px-4 py-3 border border-gray-600 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-njoy-green focus:border-transparent transition"
+            required
+          />
+        </div>
+
         <!-- Email Input -->
         <div>
           <label for="email" class="block text-sm font-medium text-gray-300 mb-2">
