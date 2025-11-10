@@ -2,7 +2,8 @@
   import BookingModal from '$lib/components/BookingModal.svelte';
   import { page } from '$app/stores';
 
-  let selectedRoomTypes = [];
+  const roomTypes = ['Double Ensuite', 'Studio', 'One Bed Flat'];
+  let selectedRoomTypes = [...roomTypes];
   let priceRange = 244;
   let contractLength = '51wks';
   let showBookingModal = false;
@@ -15,8 +16,6 @@
     { type: 'Studio', price51: 189, price45: 205, description: 'Modern studio apartment with kitchenette' },
     { type: 'One Bed Flat', price51: 225, price45: 244, description: 'Spacious one bedroom flat with full facilities' }
   ];
-
-  const roomTypes = ['Double Ensuite', 'Studio', 'One Bed Flat'];
 
   // Initialize selected room types from query parameter (only once)
   $: if ($page.url.searchParams.has('type') && !initialized) {
