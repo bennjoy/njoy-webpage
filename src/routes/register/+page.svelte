@@ -61,10 +61,35 @@
 <!-- Header -->
 <header class="bg-njoy-dark text-white fixed top-0 left-0 w-full z-50 shadow-md">
   <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <!-- Logo -->
     <a href="/" class="flex items-center text-xl font-bold hover:opacity-80 transition-opacity" style="text-decoration: none; color: inherit;">
       <img src="/favicon.svg" alt="Njoy Logo" class="h-8 w-8 mr-3" />
       Njoy<span class="ml-1 text-njoy-green font-poppins">Student Living</span>
     </a>
+
+    <!-- Navigation -->
+    <nav class="hidden md:flex space-x-6">
+      <a href="/" class="text-gray-300 hover:text-white transition" style="text-decoration: none;">Home</a>
+      
+      <!-- Locations Dropdown -->
+      <div class="relative group">
+        <button class="text-gray-300 hover:text-white transition" style="text-decoration: none; background: none; border: none; padding: 0; cursor: pointer;">
+          Locations
+        </button>
+        <div class="absolute left-0 mt-0 w-32 bg-njoy-dark border border-gray-700 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none group-hover:pointer-events-auto">
+          <a href="/locations/manchester" class="block px-4 py-2 text-gray-300 hover:text-njoy-green transition" style="text-decoration: none;">Manchester</a>
+          <a href="/locations/leeds" class="block px-4 py-2 text-gray-300 hover:text-njoy-green transition" style="text-decoration: none;">Leeds</a>
+        </div>
+      </div>
+
+      <a href="/about" class="text-gray-300 hover:text-white transition" style="text-decoration: none;">About</a>
+    </nav>
+
+    <!-- Auth buttons -->
+    <div class="flex space-x-4">
+      <a href="/login" class="text-gray-300 hover:text-white transition" style="text-decoration: none;">Sign in</a>
+      <a href="/register" class="text-njoy-green hover:text-green-400 transition" style="text-decoration: none;">Register</a>
+    </div>
   </div>
 </header>
 
@@ -72,18 +97,17 @@
 <main class="bg-[#1E1E1E] min-h-screen pt-20 flex items-center justify-center px-4">
   <div class="w-full max-w-md">
     <!-- Register Card -->
-    <div style="background-color: rgb(245, 245, 245);" class="rounded-lg shadow-2xl p-8">
-      <!-- Logo and Title -->
+    <div style="background-color: rgb(43, 43, 43);" class="rounded-lg shadow-2xl p-8">
+      <!-- Title -->
       <div class="text-center mb-8">
-        <img src="/favicon.svg" alt="Njoy Logo" class="h-12 w-12 mx-auto mb-4" />
-        <h1 class="text-3xl font-bold text-gray-900">Register</h1>
+        <h1 class="text-3xl font-bold text-white">Register</h1>
       </div>
 
       <!-- Registration Form -->
       <form on:submit={handleRegister} class="space-y-6">
         <!-- Email Input -->
         <div>
-          <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
+          <label for="email" class="block text-sm font-medium text-gray-300 mb-2">
             Email:
           </label>
           <input
@@ -91,30 +115,30 @@
             id="email"
             bind:value={email}
             placeholder=""
-            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-njoy-green focus:border-transparent transition"
+            class="w-full px-4 py-3 border border-gray-600 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-njoy-green focus:border-transparent transition"
             required
           />
         </div>
 
         <!-- Password Input -->
         <div>
-          <label for="password" class="block text-sm font-medium text-gray-700 mb-2">
+          <label for="password" class="block text-sm font-medium text-gray-300 mb-2">
             Password:
           </label>
           <input
             type="password"
             id="password"
             bind:value={password}
-            placeholder=""
-            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-njoy-green focus:border-transparent transition"
+            placeholder="Min 8 characters"
+            class="w-full px-4 py-3 border border-gray-600 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-njoy-green focus:border-transparent transition"
             required
           />
-          <p class="text-xs text-gray-500 mt-1">At least 8 characters</p>
+          <p class="text-xs text-gray-400 mt-1">At least 8 characters</p>
         </div>
 
         <!-- Confirm Password Input -->
         <div>
-          <label for="confirmPassword" class="block text-sm font-medium text-gray-700 mb-2">
+          <label for="confirmPassword" class="block text-sm font-medium text-gray-300 mb-2">
             Confirm Password:
           </label>
           <input
@@ -122,25 +146,25 @@
             id="confirmPassword"
             bind:value={confirmPassword}
             placeholder=""
-            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-njoy-green focus:border-transparent transition"
+            class="w-full px-4 py-3 border border-gray-600 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-njoy-green focus:border-transparent transition"
             required
           />
         </div>
 
         <!-- Error Message -->
         {#if errorMessage}
-          <div class="p-3 bg-red-100 border border-red-400 text-red-700 rounded-lg text-sm">
+          <div class="p-3 bg-red-900 border border-red-600 text-red-200 rounded-lg text-sm">
             {errorMessage}
           </div>
         {/if}
 
         <!-- Login Link -->
-        <div>
-          <span class="text-gray-600 text-sm">Already have an account? </span>
+        <div class="text-center">
+          <span class="text-gray-400 text-sm">Already have an account? </span>
           <button
             type="button"
             on:click={handleLogin}
-            class="text-blue-500 hover:text-blue-600 text-sm font-medium transition"
+            class="text-blue-400 hover:text-blue-300 text-sm font-medium transition"
             style="text-decoration: none; background: none; border: none; padding: 0; cursor: pointer;"
           >
             Login
@@ -152,7 +176,7 @@
           <button
             type="button"
             on:click={handleCancel}
-            class="flex-1 px-4 py-3 border-2 border-red-600 text-red-600 font-medium rounded-lg hover:bg-red-50 transition"
+            class="flex-1 px-4 py-3 border-2 border-red-600 text-red-400 font-medium rounded-lg hover:bg-red-900 hover:bg-opacity-20 transition"
             disabled={isLoading}
           >
             Cancel
