@@ -146,7 +146,7 @@
 
             <!-- Room Type Filter -->
             <div class="mb-8">
-              <label class="text-gray-300 text-sm font-medium mb-3 block">Room Type</label>
+              <div class="text-gray-300 text-sm font-medium mb-3 block">Room Type</div>
               <div class="space-y-2">
                 {#each roomTypes as type}
                   <label class="flex items-center cursor-pointer group">
@@ -173,9 +173,9 @@
 
             <!-- Price Range Slider -->
             <div>
-              <label class="text-gray-300 text-sm font-medium mb-2 block">
+              <div class="text-gray-300 text-sm font-medium mb-2 block">
                 Max Price: <span class="text-njoy-green font-bold">£{priceRange}/week</span>
-              </label>
+              </div>
               <input 
                 type="range"
                 min="158"
