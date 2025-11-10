@@ -1,5 +1,17 @@
 <script>
-  // Leeds location page
+  import BookingModal from '$lib/components/BookingModal.svelte';
+  
+  let isBookingModalOpen = false;
+  let selectedProperty = '';
+  
+  function openBookingModal(propertyName) {
+    selectedProperty = propertyName;
+    isBookingModalOpen = true;
+  }
+  
+  function closeBookingModal() {
+    isBookingModalOpen = false;
+  }
 </script>
 
 <!-- Header -->
@@ -66,7 +78,6 @@
   <!-- Content Section -->
   <div class="container mx-auto px-4" style="padding-top: 2rem; padding-bottom: 3rem;">
     <!-- Property Cards -->
-    {@html `
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 450px)); gap: 2rem; justify-content: center; max-width: 1400px; margin: 0 auto;">
       
       <!-- Carr Mills Card -->
@@ -84,14 +95,15 @@
           
           <!-- Action Buttons -->
           <div style="display: flex; gap: 0.75rem;">
-            <button style="flex: 1; padding: 0.5rem 0.25rem; background-color: #8BC34A; color: white; border-radius: 0.5rem; border: none; font-weight: 500; cursor: pointer; font-size: 0.875rem; text-align: center; transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='#689F38'" onmouseout="this.style.backgroundColor='#8BC34A'">Book viewing</button>
-            <button style="flex: 1; padding: 0.5rem 0.25rem; border: 1px solid rgb(107, 114, 128); color: white; border-radius: 0.5rem; background: transparent; font-weight: 500; cursor: pointer; font-size: 0.875rem; text-align: center; transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='rgb(55, 65, 81)'" onmouseout="this.style.backgroundColor='transparent'">Site details</button>
-            <a href="/locations/leeds/carr-mills" style="flex: 1; padding: 0.5rem 0.25rem; border: 1px solid rgb(107, 114, 128); color: white; border-radius: 0.5rem; background: transparent; font-weight: 500; cursor: pointer; font-size: 0.875rem; text-align: center; text-decoration: none; display: flex; align-items: center; justify-content: center; transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='rgb(55, 65, 81)'" onmouseout="this.style.backgroundColor='transparent'">View rooms</a>
+            <button on:click={() => openBookingModal('Carr Mills')} style="flex: 1; padding: 0.5rem 0.25rem; background-color: #8BC34A; color: white; border-radius: 0.5rem; border: none; font-weight: 500; cursor: pointer; font-size: 0.875rem; text-align: center; transition: background-color 0.2s;">Book viewing</button>
+            <button style="flex: 1; padding: 0.5rem 0.25rem; border: 1px solid rgb(107, 114, 128); color: white; border-radius: 0.5rem; background: transparent; font-weight: 500; cursor: pointer; font-size: 0.875rem; text-align: center; transition: background-color 0.2s;">Site details</button>
+            <a href="/locations/leeds/carr-mills" style="flex: 1; padding: 0.5rem 0.25rem; border: 1px solid rgb(107, 114, 128); color: white; border-radius: 0.5rem; background: transparent; font-weight: 500; cursor: pointer; font-size: 0.875rem; text-align: center; text-decoration: none; display: flex; align-items: center; justify-content: center; transition: background-color 0.2s;">View rooms</a>
           </div>
         </div>
       </div>
       
     </div>
-    `}
   </div>
 </main>
+
+<BookingModal isOpen={isBookingModalOpen} siteName={selectedProperty} on:close={closeBookingModal} />
